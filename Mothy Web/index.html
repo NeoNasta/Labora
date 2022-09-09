@@ -1,94 +1,114 @@
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
-<style>
-  .comment {
-    width: 500px;
-    border-radius: 20px;
-    padding:20px;
-    margin: 5% auto;
-    position: relative;
-    background: #17181f;
-    color: silver;
-}
-.a {
-    height: 90px;
-}
-.b:before, .b:after {
-    top: 130px;
-    left: 0;
-    width: 20px;
-    height: 20px;
-    display: block;
-    position: absolute;k
-    content: '';
-}
-.b:before {
-    background: hsla(0, 0%, 100%, 0);
-}
-.b:after {
-    border-radius: 100% 0 0 0;
-    background: hsla(0, 0%, 100%, 0);
-}
-.img-wrapper {
-    width: 130px;
-    height: 130px;
-    border-radius: 50% 50% 50% 50%;
-    margin: -20px 20px 20px -20px;
-    float: left;
-    background: #0e1a75;
-}
-.img-wrapper img {
-    width: 120px;
-    height: 120px;
-    margin: 5px;
-    border-radius: 50%;
-    background: rgba(16, 9, 46, 0.986);
-}
-  .line {
-    background-color: rgb(0, 0, 0);
-    padding: 1px 50px 1px 50px;
-  }
-  body {
-    background-color: #282a36;
-  }
-  h1 { 
-  font-size: 40px;
-}
-  .blue-background {
-      background-color: #17181f;
-      border-radius: 20px;
-      padding-top: 20px;
-      font-family: "Open Sans" , GENERIC_NAME;
-      padding: 5px 20px;
-      margin: 20px;
+{% extends "layout.html" %}
 
-    }
-    .descripcion {
-    text-align: justify;
-    text-align-last: center;
-}
-</style>
-<div class="line"></div>
-<h1 style="color: #fbd600;"><center>¿Por que contratarnos?</h1></center>
-<div class="blue-background">
-  <h2 style="color: silver;"><center>PROTECCION DDOS</center></h2> 
-  <p  style="color: white;" class="descripcion">te ofrecemos la mejor proteccion DDoS para tus servidores. También todos tus datos y pagos estan encriptados completamente</p>
-  <h2 style="color: silver;"><center>SOPORTE 24/7</center></h2> 
-  <p  style="color: white;" class="descripcion">ofrecemos un increible soporte por livechat, discord y tambien en tickets desde el area de cliente. Nuestro equipo de staff te ayudara en todos tus problemas</p>
-  <h2 style="color: silver;"><center>ALMACENAMIENTO ILIMITADO</center></h2> 
-  <p  style="color: white;" class="descripcion">contamos con disco duro SSD ilimitado para gran mayoria de nuestros servicios!</p>
+{% block content %}
+	<div class="body">
+		<div class="content">
+		    <div class="">
+		   <div class="panel-heading" id="Bienvenido"></div>
+			<div class="panel panel-default modul">
+				<div class="panel-body">
+					<p>
+				  		{{ index.description|raw }}
+					</p>
+				</div>
+			</div>
+			
+			        <div class="panel panel-default"><div class="cyvers-line1" id="line1-n"></div><div class="panel-body"><div id="line1-t"></div></div></div>
+        <div class="panel panel-default"><div class="cyvers-line2" id="line2-n"></div><div class="panel-body"><div id="line2-t"></div><br>
+        
+        
+        
+        <!-- BLOCK 2 BUTTONS -->
+    </div>
+</div>
+        
+        <div class="panel panel-default"><div class="cyvers-line3" id="line3-n"></div><div class="panel-body"><div id="line3-t"></div></div></div>
+    </div>
+			
+		</div>
+		
+		
+		
+	
+		<div class="col-md-3">
+		     <div class="basket">
+		    {% if basket.username %} 
+		     <div class="logged">
+		         <div class="logged-box">
+		             <img class="toggle" src="https://minotar.net/body/{{ basket.ign }}/30.png">
+		             <div class="content-l"><i class="fas fa-user-alt"></i><br>
+                <span id="logged-as">Logged as</span> <br>
+            <strong>{{ basket.ign }}</strong><br>
+            <div class="btn btn-logout"><a href="/checkout/logout">{{ __("Logout") }}</a>
+        </div>
+    </div>
+</div>
+    
+         <div class="cart">     
+             <b>{% if basket.packages|length > 0 %}
+                    <button type="button" class="dropdown-toggle" data-toggle="dropdown">
+                    {{ _p(":count item for :amount :currency", basket.packages|length, {'count' : basket.packages|length, 'amount' : basket.price|money, 'currency' : basket.currency}) }} <span class="fa fa-caret-down"></span>
+                    </button>
+                    <ul class="dropdown-menu cart-menu">
+                        {% for package in basket.packages %}
+                            <li class="item">
+                            <div class="name">{{ package.name[:25] }}</div>
+                            <div class="price">{{ package.price|money }} <small>{{ basket.currency }}</small></div>
+                            <div class="remove"><a href="/checkout/packages/remove/{{ package.id }}"><span class="fa fa-times"</span></a></div>
+                            </li>
+                        {% endfor %}
+                        <li class="checkout">
+                          <div class="total"><b>{{ __("Total") }}:</b> <small>{{ basket.price|money }} {{ basket.currency }}</small></div>
+                          <div class="button"><a href="/checkout/basket" class="btn btn-success">{{ __("Revision") }}</a></div>
+                        </li>
+                    </ul>
+                {% else %}
+                  <a href="#" disabled="disabled"><i class="icon-shopping-cart icon-white"></i> 
+                  {{ _p(":count item for :amount :currency", basket.packages|length, {'count' : basket.packages|length, 'amount' : basket.price|money, 'currency' : basket.currency}) }}
+                  </a>
+                {% endif %}</b>
+         </div>
+       
+</div>
+		</div>
+                    {% else %} 
+                    
+<div class="login">
+    <div data-toggle="modal" data-target="#login" aria-hidden="true" title="Login" data-html="true">
+         <i class="fas fa-sign-in-alt"></i> {{ __("Login") }}</div>
+    
+            <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-hidden="true">  
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span></button>
+                            <h4 class="modal-title">{{ __("Please enter your username to continue") }}</h4>
+                        </div>
+                            <div class="modal-body login-modal">
+                                <form method="POST" action="/login" accept-charset="UTF-8">
+                                    <input name="ign" placeholder="" class="form-control" type="text" required="">
+                                </div>
+                    <div class="modal-footer">
+               
+               
+               <!-- LOGIN PAGE BUTTON -->
+                <button type="submit" name="type" class="btn btn-primary btn-block"> {{ __("Login") }} </button>
 
-</div>
-<h1 style="color: #fbd600;"><center>Mira lo que Nuestros Clientes Dicen de nosotros:</h1></center>
-<div class="comment b">
-  <a href="#" class="img-wrapper"><img src="https://cdn.discordapp.com/attachments/830880359523942451/967950197080588288/logo.png"></a>
-  <div class="comment-content">
-      <p style="text-align: justify;">Un excelente servicio, actualmente estoy usando un servicio de minecraft y me esta andando perfecto, el soporte es excelente te ayudan manera detallada y rápida y el precio es bastante económico, recomiendo al 100% NukatHosting. </p>
-  </div>
-</div>
-</div>
-<div class="comment b">
-  <a href="#" class="img-wrapper"><img src="https://cdn.discordapp.com/attachments/949171229389119528/967955717141168128/logo3.png"></a>
-  <div class="comment-content">
-      <p style="text-align: justify;">Un hosting accesible para cualquier tipo de usuario con economía baja, los precios y planes son mas que suficientes para nuestros proyectos y se agradece la atención al cliente de una manera detallada y veloz, le doy mis 5 estrellas este tipo de hosting por ayudar de una manera muy flexible, cómoda y de calidad ascendente.</p>
-  </div>
-</div>
+
+               
+		    </div>
+		    </form>
+           </div>
+                 </div>
+            </div>
+        </div>
+                    
+		</div>
+		
+		 {% endif %}
+		    
+			{{ modules|raw }}
+			</div>
+	</div>
+{% endblock %}
