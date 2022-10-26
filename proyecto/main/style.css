@@ -9,31 +9,26 @@ body {
 .web-logo {
   text-align: center;
 }
-.footer {
-  background-color: black;
-  background-size: 100% auto;
-  color: white;
-  text-align: right;
-  font-size: 12px;
-  display: block;
-  position: relative;
-  min-height:100%;
-	width: 100%;
-  max-width: 1300px;
-  padding: 0 10px;
-  border-top: none;
-}
-.footer-left {
-  left: -20;
-  width: 100%;
-  text-align: left;
-  }
-.footer-center {
-  width: 100%;
+.web-tittle {
   text-align: center;
-  }
-.footer-right {
-  left: 0;
-  width: 100%;
-  text-align: right;
-  }
+}
+
+
+
+
+.footer-con {
+  padding: 40px 0;
+  background-color: black;
+  color: #4b4c4d;
+}
+.footer-con .footer-social {
+  text-align: center;
+  padding-bottom: 18px;
+}
+.footer-con .footer-text {
+  margin-top: -20px;
+  text-align: center;
+  font-size: 13px;
+  color: white;
+  margin-bottom: 0;
+}
