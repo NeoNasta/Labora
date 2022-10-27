@@ -6,18 +6,73 @@ body {
   font: normal;
   font-size: 16px;
 }
-.web-logo {
-  text-align: center;
-}
-.web-tittle {
+.web-logo, .web-tittle, .web-informacion-tittle, .web-precios-precios-tittle, .web-ubi-map, .web-map, .web-img1 {
   text-align: center;
 }
 
+.web-text {
+  background-color: #17181f;
+  text-align: center;
+  border-radius: 10px;
+  padding-top: 20px;
+  padding: 5px 20px;
+  margin: 5% auto;
+  font-size: 18px;
+}
+
+.web-informacion {
+  background-color: #17181f;
+  border-radius: 10px;
+  padding-top: 20px;
+  padding: 5px 20px;
+  margin: 5% auto;
+  font-size: 18px;
+}
+.web-informacion-horario {
+  width: 300px;
+  border-radius: 20px;
+  padding: 20px;
+  margin: 5% auto;
+  position: relative;
+  background: lightslategrey;
+  text-align: center;
+}
+.web-informacion-sedes {
+  width: 300px;
+  border-radius: 20px;
+  padding: 20px;
+  margin: 5% auto;
+  position: relative;
+  background: lightslategrey;
+  text-align: center;
+}
+
+.web-informacion-servicios {
+  width: 300px;
+  border-radius: 20px;
+  padding: 20px;
+  margin: 5% auto;
+  position: relative;
+  background: lightslategrey;
+  text-align: center;
+}
 
 
+
+
+.web-map > iframe{
+  text-align: center;
+  width: 1200px;
+  height: 500px;
+}
+.footer-top {
+  padding: -20px 0;
+  background-color: black;
+  color: #4b4c4d;
+}
 
 .footer-con {
-  padding: 40px 0;
+  padding: 20px 0;
   background-color: black;
   color: #4b4c4d;
 }
