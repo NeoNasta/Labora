@@ -91,13 +91,49 @@
           <h2>Clase</h2>
           <p>$ 250 / Clase</p>
           <p>Nuestro plan menos popular.</p>
-          <p>INSERTAR CONTADOR</p>
+          <form name="clasescalculator">
+            <div class="clases">
+              <select name="clases" id="clases">
+                <option value="1">1 Clase</option>
+                <option value="2">2 Clases</option>
+                <option value="3">3 Clases</option>
+                <option value="4">4 Clases</option>
+                <option value="5">5 Clases</option>
+                <option value="6">6 Clases</option>
+                <option value="7">7 Clases</option>
+                <option value="8">8 Clases</option>
+                <option value="9">9 Clases</option>
+                <option value="10">10 Clases</option>
+              </select>
+              <button class="clases-button" type="button" onclick="clasesPrice()">Calcular</button>
+            </div>
+            <div id="clasesprice"></div> 
+          </form>
         </div>
         <div class="web-planes-precios-mensual">
           <h2>Mensual</h2>
           <p>$ 3,500 / Mes</p>
           <p>Nuestro plan más popular.</p>
-          <p>INSERTAR CONTADOR</p>
+          <form name="mesescalculator">
+            <div class="meses">
+              <select name="meses" id="meses">
+                <option value="1">1 Mes</option>
+                <option value="2">2 Meses</option>
+                <option value="3">3 Meses</option>
+                <option value="4">4 Meses</option>
+                <option value="5">5 Meses</option>
+                <option value="6">6 Meses</option>
+                <option value="7">7 Meses</option>
+                <option value="8">8 Meses</option>
+                <option value="9">9 Meses</option>
+                <option value="10">10 Meses</option>
+                <option value="11">11 Meses</option>
+                <option value="12">12 Meses</option>
+              </select>
+              <button class="meses-button" type="button" onclick="mesesPrice()">Calcular</button>
+            </div>
+            <div id="mesprice"></div> 
+          </form>
         </div>
       </div>
     </div>

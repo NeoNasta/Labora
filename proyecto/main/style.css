@@ -14,8 +14,9 @@ nav ul{
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
+  
 }
+
 nav ul li{
   margin: 0px 15px;
   list-style: none;
@@ -94,7 +95,6 @@ body {
 }
 
 .web-planes-precios {
-  background-color: #17181f;
   border-radius: 10px;
   padding-top: 20px;
   padding: 5px 20px;
@@ -111,19 +111,31 @@ body {
 .web-planes-precios-clases {
   width: 300px;
   border-radius: 20px;
-  padding: 20px;
-  background: lightslategrey;
+  padding: 30px;
+  background-color: #17181f;
+  text-align: center;
+  margin: 30px;
+}
+.clases, .clases-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+.web-planes-precios-mensual {
+  width: 300px;
+  border-radius: 20px;
+  padding: 30px;
+  background-color: #17181f;
   text-align: center;
   margin: 30px;
 }
 
-.web-planes-precios-mensual {
-  width: 300px;
-  border-radius: 20px;
-  padding: 20px;
-  background: lightslategrey;
-  text-align: center;
-  margin: 30px;
+.meses, .meses-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
 }
 
 .web-map > iframe{
