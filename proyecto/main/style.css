@@ -1,11 +1,40 @@
+header {
+  padding: -20px 0;
+  background-color: black;
+  color: #4b4c4d;
+}
+header > .web-logo {
+  padding: -20px 0;
+  background-color: black;
+  color: #4b4c4d;
+  text-align: center;
+}
+nav ul{
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+nav ul li{
+  margin: 0px 15px;
+  list-style: none;
+}
+nav ul a{
+  color: #C4CFDE;
+  font-size: 13px;
+}
+
 body {
   background-color: #282A36;
 }
+
 .web-color-text {
   color: white;
   font: normal;
   font-size: 16px;
 }
+
 .web-logo, .web-tittle, .web-informacion-tittle, .web-precios-precios-tittle, .web-ubi-map, .web-map, .web-img1 {
   text-align: center;
 }
@@ -28,14 +57,12 @@ body {
   margin: 5% auto;
   font-size: 18px;
 }
-.web-informacion-horario {
-  width: 300px;
-  border-radius: 20px;
-  padding: 20px;
-  margin: 5% auto;
-  position: relative;
-  background: lightslategrey;
-  text-align: center;
+.web-informacion-container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px;
 }
 .web-informacion-sedes {
   width: 300px;
@@ -44,7 +71,17 @@ body {
   margin: 5% auto;
   position: relative;
   background: lightslategrey;
-  text-align: center;
+
+}
+
+.web-informacion-horario {
+  width: 300px;
+  border-radius: 20px;
+  padding: 20px;
+  margin: 5% auto;
+  position: relative;
+  background: lightslategrey;
+
 }
 
 .web-informacion-servicios {
@@ -54,32 +91,59 @@ body {
   margin: 5% auto;
   position: relative;
   background: lightslategrey;
-  text-align: center;
 }
 
+.web-planes-precios {
+  background-color: #17181f;
+  border-radius: 10px;
+  padding-top: 20px;
+  padding: 5px 20px;
+  margin: 5% auto;
+  font-size: 18px;
+}
+.web-planes-container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px;
+}
+.web-planes-precios-clases {
+  width: 300px;
+  border-radius: 20px;
+  padding: 20px;
+  background: lightslategrey;
+  text-align: center;
+  margin: 30px;
+}
 
-
+.web-planes-precios-mensual {
+  width: 300px;
+  border-radius: 20px;
+  padding: 20px;
+  background: lightslategrey;
+  text-align: center;
+  margin: 30px;
+}
 
 .web-map > iframe{
   text-align: center;
   width: 1200px;
   height: 500px;
 }
-.footer-top {
-  padding: -20px 0;
-  background-color: black;
-  color: #4b4c4d;
-}
+
 
 .footer-con {
   padding: 20px 0;
   background-color: black;
   color: #4b4c4d;
 }
+
 .footer-con .footer-social {
   text-align: center;
   padding-bottom: 18px;
 }
+
 .footer-con .footer-text {
   margin-top: -20px;
   text-align: center;
