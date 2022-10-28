@@ -6,6 +6,7 @@
     <meta name="author" content="NeoNasta | NeoNasta#1741">
     <link rel="shortcut icon" href="/proyecto/assets/logo.png">
     <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="java.js"></script>
     <title>Formando Cracks</title>
   </head>
 <header class="header">
@@ -46,6 +47,12 @@
         <h1>INFORMACION</h1>
       </div>
       <div class="web-informacion-container">
+        <div class="web-informacion-sedes">
+          <h2>Sedes</h2>
+          <p>Constitución Calle Salta 1727 CABA</p>
+          <p>Gallo 241 barrio Almagro CABA </p>
+        </div>
+
         <div class="web-informacion-horario">
           <h2>Horarios</h2>
           <span>Martes y jueves</span>
@@ -68,13 +75,7 @@
           <br>
           <span>10 a 15 años de 17 a 18 h</span>
         </div>
-
-        <div class="web-informacion-sedes">
-          <h2>Sedes</h2>
-          <p>Sede Constitución Calle Salta 1727 CABA</p>
-          <p>Sede Gallo 241 barrio Almagro CABA </p>
-        </div>
-
+        
         <div class="web-informacion-servicios">
           <h2>Servicios</h2>
           <p>Clase por alumno niño.</p>
@@ -88,10 +89,10 @@
       </div>
       <div class="web-planes-container">
         <div class="web-planes-precios-clases">
-          <h2>Clase</h2>
+          <h2>Clases</h2>
           <p>$ 250 / Clase</p>
           <p>Nuestro plan menos popular.</p>
-          <form name="clasescalculator">
+          <form name="clases-calculator">
             <div class="clases">
               <select name="clases" id="clases">
                 <option value="1">1 Clase</option>
@@ -104,17 +105,19 @@
                 <option value="8">8 Clases</option>
                 <option value="9">9 Clases</option>
                 <option value="10">10 Clases</option>
+                <option value="11">11 Clases</option>
+                <option value="12">12 Clases</option>
               </select>
-              <button class="clases-button" type="button" onclick="clasesPrice()">Calcular</button>
+              <button class="clases-button" type="button" onclick="clasesCalculate()">Calcular</button>
             </div>
-            <div id="clasesprice"></div> 
+            <div id="clasexprice"></div> 
           </form>
         </div>
         <div class="web-planes-precios-mensual">
           <h2>Mensual</h2>
           <p>$ 3,500 / Mes</p>
           <p>Nuestro plan más popular.</p>
-          <form name="mesescalculator">
+          <form name="meses-calculator">
             <div class="meses">
               <select name="meses" id="meses">
                 <option value="1">1 Mes</option>
@@ -130,9 +133,9 @@
                 <option value="11">11 Meses</option>
                 <option value="12">12 Meses</option>
               </select>
-              <button class="meses-button" type="button" onclick="mesesPrice()">Calcular</button>
+              <button class="meses-button" type="button" onclick="mesesCalculate()">Calcular</button>
             </div>
-            <div id="mesprice"></div> 
+            <div id="mesesprice"></div> 
           </form>
         </div>
       </div>
