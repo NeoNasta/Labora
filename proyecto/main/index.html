@@ -6,20 +6,26 @@
     <meta name="author" content="NeoNasta | NeoNasta#1741">
     <link rel="shortcut icon" href="/proyecto/assets/logo.png">
     <link rel="stylesheet" href="style.css">
-    <script type="text/javascript" src="java.js"></script>
+    <script type="text/javascript" src="javascript.js"></script>
     <title>Formando Cracks</title>
   </head>
 <header class="header">
   <div class="navigation">
     <nav>
       <ul>
-        <li><a href="#">INFORMACION</a></li>
+        <li class"header-info"><a href="#informacion">INFORMACION</a></li>
         <div class="web-logo">
           <img src="/proyecto/assets/logo.png" width=100 />
         </div>
-        <li><a href="#">¿DONDE ESTAMOS?</a></li>
+        <li class"header-donde"><a href="#">¿DONDE ESTAMOS?</a></li>
       </ul>
     </nav>
+  </div>
+  <div class="header-icon">
+    <a href="#"><img src="/proyecto/assets/facebook.png" width=40 class="header-icon"/></a>
+    <a href="#"><img src="/proyecto/assets/instagram.png" width=40 class="header-icon"/></a>
+    <a href="#"><img src="/proyecto/assets/whatsapp.png" width=40 class="header-icon"/></a>
+    <a href="#"><img src="/proyecto/assets/youtube.png" width=40 class="header-icon"/></a>
   </div>
 </header>
 <body>
@@ -42,7 +48,7 @@
 
     <div class="web-informacion web-color-text">
       <div class="web-informacion-tittle">
-        <h1>INFORMACION</h1>
+        <h2>INFORMACION</h2> 
       </div>
       <div class="web-informacion-container">
         <div class="web-informacion-sedes">
@@ -92,7 +98,7 @@
           <p>Nuestro plan menos popular.</p>
           <form name="clases-calculator">
             <div class="clases">
-              <select name="clases" id="clases">
+              <select name="clases" id="clases" onchange="clasesCalculate()">
                 <option value="1">1 Clase</option>
                 <option value="2">2 Clases</option>
                 <option value="3">3 Clases</option>
@@ -106,7 +112,6 @@
                 <option value="11">11 Clases</option>
                 <option value="12">12 Clases</option>
               </select>
-              <button class="clases-button" type="button" onclick="clasesCalculate()">Calcular</button>
             </div>
             <div id="clasexprice"></div> 
           </form>
@@ -117,7 +122,7 @@
           <p>Nuestro plan más popular.</p>
           <form name="meses-calculator">
             <div class="meses">
-              <select name="meses" id="meses">
+              <select name="meses" id="meses" onchange="mesesCalculate()">
                 <option value="1">1 Mes</option>
                 <option value="2">2 Meses</option>
                 <option value="3">3 Meses</option>
@@ -131,7 +136,6 @@
                 <option value="11">11 Meses</option>
                 <option value="12">12 Meses</option>
               </select>
-              <button class="meses-button" type="button" onclick="mesesCalculate()">Calcular</button>
             </div>
             <div id="mesesprice"></div> 
           </form>

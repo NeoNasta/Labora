@@ -1,5 +1,5 @@
 var costs = {
-	clases: {basePrice: 250, maxClass: 12},
+	  clases: {basePrice: 250, maxClass: 12},
     meses: {basePrice: 3500, maxClass: 12}
 };
   
