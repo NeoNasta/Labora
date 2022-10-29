@@ -1,36 +1,21 @@
 header {
   padding: -20px 0;
+  text-align: center;
   background-color: black;
-  color: #4b4c4d;
 }
-.header-icon > .web-logo {
+
+.navigation {
+  height: 100%;
   text-align: center;
   padding-bottom: 18px;
-  text-align: center;
-}
-
-header > .web-logo {
-  padding: -20px 0;
-  background-color: black;
-  color: #4b4c4d;
-  text-align: center;
-}
-
-
-nav ul{
-  height: 100%;
-  display: flex;
   justify-content: center;
   align-items: center;
   align-content: center;
 }
-
-nav ul li{
-  margin: 0px 15px;
-  list-style: none;
+.header-icon {
+  text-align: right;
+  
 }
-
-
 
 body {
   background-color: #282A36;
