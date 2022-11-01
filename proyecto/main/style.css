@@ -1,14 +1,21 @@
-header {
-  padding: -20px 0;
-  text-align: center;
-  background-color: black;
+.header-nav {
+  background-color: transparent;
+  overflow: hidden;
+}
+.header-nav a {
+  float: left;
+  color: #f2f2f2;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  text-align: right;
 }
 
-.navigation {
-  text-align: center;
-  padding-bottom: 10px;
-  margin: 0% auto;
-}
+
+
+
+
+
 .header-icon {
   text-align: right;
 }
@@ -17,7 +24,6 @@ body {
   background-color: #282A36;
   }
 .web-img1 {
-  margin: 3%;
   position: relative;
 }
 .web-tittle {
@@ -26,7 +32,7 @@ body {
   left: 360px;
 }
 .web-tittle > h1{
-  font-size: 50px;
+  font-size: 60px;
 }
 .web-color-text {
   color: white;
