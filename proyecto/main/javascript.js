@@ -16,3 +16,11 @@ var costs = {
     var mesesprice = costs.meses.basePrice * meses;
     document.getElementById('mesesprice').innerHTML = "$" + mesesprice;
   }
+
+  function scroll()
+  {
+    window.addEventListener("scroll", function(){
+      var header = document.querySelector("header");
+      header.classList.toggle("sticky", window.scrollY > 0)
+    })
+  }
